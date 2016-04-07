@@ -31,7 +31,12 @@ if($_POST["select_voting"]) {
 
         </select>
         <input type="submit" name="select_voting" value="Vali">
-</form>
+	</form>
+	<form>
+		<input type="text" size="30" onkeyup="showResult(this.value">
+		<div id="livesearch">
+		</div>
+	</form>
 </div>
 <?php
 
