@@ -17,7 +17,7 @@ include "../data/config.php";
 	$search_string = $db->pg_escape_string($search_string);
 	
 	if (strlen($search_string) >= 1 && $search_string !== ' ') {
-		$query = 'SELECT * FROM search WHERE function LIKE "%'.$search_string.'%" OR name LIKE "%'.$search_string.'%"';
+		$query = 'SELECT * FROM voting WHERE function LIKE "%'.$search_string.'%" OR name LIKE "%'.$search_string.'%"';
 	}
 	
 	$result = $db->query($query);
