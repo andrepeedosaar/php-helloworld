@@ -82,7 +82,7 @@
 	$(document).ready(function(){
 		$("input.select_voting").typeahead({
 			name: "select_voting",
-			remote: "search.php?key=%QUERY",
+			remote: "../page/search.php?key=%QUERY",
 			limit: 10
 		});
 	});
