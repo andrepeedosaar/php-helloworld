@@ -80,8 +80,8 @@
 	*/
 	
 	$(document).ready(function(){
-		$("input.select_voting").typeahead({
-			name: "select_voting",
+		$("input.search_list").typeahead({
+			name: "search_list",
 			remote: "../page/search.php?key=%QUERY",
 			limit: 10
 		});
