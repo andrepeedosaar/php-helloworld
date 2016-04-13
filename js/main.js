@@ -39,6 +39,7 @@
 		$("input#search").focus();
 	});
 	
+	/*
 	//On search submit and get results
 	function search() {
 		var query_value = $("input#search").val();
@@ -76,7 +77,15 @@
 		};
 	});
 	
+	*/
 	
+	$(document).ready(function(){
+		$("input.select_voting").typeahead({
+		name: "select_voting",
+		remote: "search.php?key=%QUERY",
+		limit: 10
+		});
+	});
 	
 	
 	
