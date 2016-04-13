@@ -7,7 +7,7 @@
 		echo "Error : Unable to open database\n";
 	} 
 	
-	$key = $_GET["key"];
+	$key = $_GET['key'];
 	$array = array();
 	$result = pg_query($db, "SELECT firstname, lastname FROM candidate WHERE firstname LIKE '%{key}%'");
 	

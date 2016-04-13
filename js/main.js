@@ -80,9 +80,9 @@
 	*/
 	
 	$(document).ready(function(){
-		$("input.search_list").typeahead({
-			name: "search_list",
-			remote: "../page/search.php?key=%QUERY",
+		$('input.search_list').typeahead({
+			name: 'search_list',
+			remote: '../page/search.php?key=%QUERY',
 			limit: 10
 		});
 	});

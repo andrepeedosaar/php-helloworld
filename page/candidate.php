@@ -32,7 +32,7 @@ if($_POST["select_voting"]) {
         </select>
         <input type="submit" name="select_voting" value="Vali">
 		<div class="icon">
-			<input name="search_list" id="search" type="text" size="25">
+			<input name="search_list" type="text" size="25">
 		</div>
 	</form>
 </div>
