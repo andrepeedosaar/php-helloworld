@@ -9,7 +9,12 @@
 	
 	$key = $_GET['key'];
 	$array = array();
-	$result = pg_query($db, "SELECT firstname, lastname FROM candidate WHERE firstname ILIKE '%{$key}%'");
+	$sql = "SELECT firstname, lastname 
+			FROM candidate 
+			WHERE firstname
+			LIKE '%.$key.%'";
+	
+	$result = pg_query($db, $sql);
 	
 	while($row = pg_fetch_assoc($result)) {
 		$array[] = $row["firstname"]." ".$row["lastname"];
