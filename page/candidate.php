@@ -31,8 +31,9 @@ if($_POST["select_voting"]) {
 
         </select>
         <input type="submit" name="select_voting" value="Vali">
-		<div class="icon">
-			<input name="search_list" type="text" size="25">
+		<div class="frmSearch">
+			<input type="text" id="search-id" size="25">
+			<div id="suggestion-box"></div>
 		</div>
 	</form>
 </div>
