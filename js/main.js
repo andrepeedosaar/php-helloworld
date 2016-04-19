@@ -86,7 +86,7 @@
 				url: '../page/search.php?key=%QUERY',
 				wildcard: '%QUERY'
 			}
-			limit: 10;
+			//limit: 10;
 		});
 	});
 	
