@@ -38,12 +38,11 @@
 	$(document).ready(function() {
 	
 		$("div.frmSearch").click(function(){
-			$("#search-box").focus();
+			$("#search").focus();
 		});
 		
-		$("#search-box").autocomplete({
-			source:"../page/search.php",
-			minLength:2
+		$("#search").autocomplete({
+			source: "../page/search.php";
 		});
 		
 	});
