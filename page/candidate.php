@@ -12,7 +12,6 @@ if($_POST["select_voting"]) {
             <option value="0" <?php if(!$voting)echo"selected='selected'"?> disabled="disabled">Vali</option>
             <?php
             if($db){
-
                 $result = pg_query($db, "SELECT * FROM voting");
                 while($row = pg_fetch_assoc($result)){
                     $id = $row["id"];
@@ -24,11 +23,8 @@ if($_POST["select_voting"]) {
                         echo "<option value='$id'>$title</option>";
                     }
                 }
-
             }
-
             ?>
-
         </select>
         <input type="submit" name="select_voting" value="Vali">
 		<div class="frmSearch">
@@ -38,8 +34,6 @@ if($_POST["select_voting"]) {
 	</form>
 </div>
 <?php
-
-
         if($voting) {
             $candidateSum = 0;
             $voteSum = 0;

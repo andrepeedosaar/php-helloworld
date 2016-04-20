@@ -9,10 +9,10 @@
 	
 	$key = $_GET['key'];
 	$array = array();
-	$sql = "SELECT firstname, lastname 
+	$sql = 'SELECT firstname, lastname 
 			FROM candidate 
 			WHERE firstname
-			LIKE '".$key."%'";
+			LIKE "%'.$key.'%"';
 	
 	$result = pg_query($db, $sql);
 	
