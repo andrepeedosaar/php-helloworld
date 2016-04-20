@@ -17,7 +17,9 @@
 	//Õige SQL lause andmebaasiste andmete kätte saamiseks
 	$sql = 'SELECT firstname, lastname
 			FROM candidate
-			WHERE firstname = '".$key."'';
+			WHERE firstname 
+			LIKE '%".key."%'
+			';
 
 	$result = pg_query($db, $sql);
 	
