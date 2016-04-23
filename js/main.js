@@ -42,13 +42,6 @@
 			$("#search").focus();
 		});
 		
-		$("#search").typeahead({
-			name: 'typeahead',
-			remote:'../page/search.php?key=%QUERY',
-			limit : 10
-		});
-		
-	/*
 		$("#search").live("keyup", function(e) {
 			// Set Timeout
 			clearTimeout($.data(this, 'timer'));
