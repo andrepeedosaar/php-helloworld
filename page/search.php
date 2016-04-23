@@ -18,12 +18,23 @@
 			LIKE '".$key."%'";
 	*/
 	//Õige SQL lause andmebaasiste andmete kätte saamiseks
+	//LAUSE TÖÖTAB HEROKUS ÕIGESTI
 	$sql = "SELECT firstname, lastname
 			FROM candidate
 			WHERE firstname 
 			LIKE '".$key."%'";
 	
-			
+	
+	//HTML output format
+	/*$html = '';
+	$html .= '<li class="result">';
+	$html .= '<a target="_blank" href="urlString">';
+	$html .= '<h3>nameString</h3>';
+	$html .= '<h4>functionString</h4>';
+	$html .= '</a>';
+	html .= '</li>';
+	*/
+	
 	$result = pg_query($db, $sql);
 	
 	if (!$result) { 
@@ -31,6 +42,11 @@
 		echo pg_last_error(); 
 		exit(); 
 	} 
+	
+	// Check Length More Than One Character
+	/*if (strlen($search_string) >= 1 && $search_string !== ' ') {
+	}
+	*/
 	
 	while($row = pg_fetch_assoc($result)) {
 		$array[$row['id']] = $row["firstname"]." ".$row["lastname"];
