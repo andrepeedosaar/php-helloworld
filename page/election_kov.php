@@ -3,7 +3,7 @@
 ?>
 
 	<section id="content">
-		<?php require 'election_info/kov_info.php';?>
+		<?php require 'election_content/kov_info.php';?>
 	</section>
 	
 <?php

@@ -47,7 +47,6 @@
 			source: "page/search.php?key=",
 			minLength: 2
 		});
-	
 	});
 	
 	

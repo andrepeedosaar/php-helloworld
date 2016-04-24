@@ -2,7 +2,7 @@
 	<script>
 		$(document).ready(function() {
 			//HISTORY
-			var nav, content fetchAndInsert;
+			var nav, content, fetchAndInsert;
 			
 			nav = $('nav#main');
 			content = $('section#content');
@@ -10,7 +10,7 @@
 			//Fetches and inserts content into conteiner
 			fetchAndInsert = function(href) {
 				$.ajax({
-					url:'http://localhost/page/election_info/' + href.split('/').pop(),
+					url:'http://localhost/ + href.split('/').pop(),
 					method: 'GET',
 					cache: false,
 					success: function(data) {

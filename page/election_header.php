@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<nav id="main">
-			<a href="election_info/kov_info.php">Kohalikud valimised</a>
-			<a href="election_info/pres.php">Presidendi valimised</a>
-			<a href="election_info/rg_info.php">Riigikogu valimised</a>
+			<a href="?page=election_kov">Kohalikud valimised</a>
+			<a href="?page=election_pres">Presidendi valimised</a>
+			<a href="?page=election_rk">Riigikogu valimised</a>
 		</nav>
