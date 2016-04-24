@@ -11,12 +11,14 @@
 	$key = $_GET['key'];
 	
 	$array = array();
+	
 	//SQL localserveris testimiseks
 	/*$sql = "SELECT * 
 			FROM person 
 			WHERE firstname 
 			LIKE '".$key."%'";
 	*/
+	
 	//Õige SQL lause andmebaasiste andmete kätte saamiseks
 	//LAUSE TÖÖTAB HEROKUS ÕIGESTI
 	$sql = "SELECT firstname, lastname
@@ -31,9 +33,9 @@
 		echo pg_last_error(); 
 		exit(); 
 	} 
-	
+	//$array[$row['id'] = $row["firstname"]." ".$row["lastname"]];
 	while($row = pg_fetch_assoc($result)) {
-		$array[$row['id'] = $row["firstname"]." ".$row["lastname"];
+		$array[$row["firstname"]." ".$row["lastname"]];
 	}
 	
 	echo json_encode($array);
