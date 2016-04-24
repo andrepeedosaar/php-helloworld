@@ -33,9 +33,9 @@
 		echo pg_last_error(); 
 		exit(); 
 	} 
-	//
+	
 	while($row = pg_fetch_assoc($result)) {
-		$array[$row['id'] = $row["firstname"]." ".$row["lastname"]];
+		$array[$row['id']] = $row["firstname"]." ".$row["lastname"];
 	}
 	
 	echo json_encode($array);
