@@ -54,12 +54,13 @@ input[type=submit]{
 	margin-left: 0px
 }
 
-.ui-menu {
+.ui-autocomplete {
 	list-style:none;
 	padding: 2px;
 	margin: 0;
 	display:block;
 	float: left;
+	background:white;
 }
 
 #header {
