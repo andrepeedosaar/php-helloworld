@@ -24,7 +24,7 @@
 	$sql = "SELECT id, firstname, lastname
 			FROM candidate
 			WHERE firstname 
-			LIKE '".$key."%'";
+			ILIKE '".$key."%'";
 	
 	$result = pg_query($db, $sql);
 	
