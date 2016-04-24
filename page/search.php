@@ -21,7 +21,7 @@
 	
 	//Õige SQL lause andmebaasiste andmete kätte saamiseks
 	//LAUSE TÖÖTAB HEROKUS ÕIGESTI
-	$sql = "SELECT firstname, lastname
+	$sql = "SELECT id, firstname, lastname
 			FROM candidate
 			WHERE firstname 
 			LIKE '".$key."%'";
@@ -33,9 +33,9 @@
 		echo pg_last_error(); 
 		exit(); 
 	} 
-	//$array[$row['id'] = $row["firstname"]." ".$row["lastname"]];
+	//
 	while($row = pg_fetch_assoc($result)) {
-		$array[$row["firstname"]." ".$row["lastname"]];
+		$array[$row['id'] = $row["firstname"]." ".$row["lastname"]];
 	}
 	
 	echo json_encode($array);
