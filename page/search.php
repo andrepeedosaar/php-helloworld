@@ -12,18 +12,18 @@
 	
 	$array = array();
 	//SQL localserveris testimiseks
-	/*$sql = "SELECT * 
+	$sql = "SELECT * 
 			FROM person 
 			WHERE firstname 
 			LIKE '".$key."%'";
-	*/
+	
 	//Õige SQL lause andmebaasiste andmete kätte saamiseks
 	//LAUSE TÖÖTAB HEROKUS ÕIGESTI
-	$sql = "SELECT firstname, lastname
+	/*$sql = "SELECT firstname, lastname
 			FROM candidate
 			WHERE firstname 
 			LIKE '".$key."%'";
-	
+	*/
 	$result = pg_query($db, $sql);
 	
 	if (!$result) { 

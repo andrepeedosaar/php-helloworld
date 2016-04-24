@@ -44,7 +44,7 @@
 		});
 		
 		$("#search").autocomplete({
-			source: "search.php",
+			source: "page/search.php?key=",
 			minLength: 2
 		});
 	
