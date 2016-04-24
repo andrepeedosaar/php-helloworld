@@ -8,7 +8,7 @@
 		echo "Error : Unable to open database\n";
 	} 
 	
-	$key = $_GET['key'];
+	$key = $_GET['term'];
 	
 	$array = array();
 	

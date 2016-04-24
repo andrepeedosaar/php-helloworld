@@ -54,6 +54,14 @@ input[type=submit]{
 	margin-left: 0px
 }
 
+.ui-menu {
+	list-style:none;
+	padding: 2px;
+	margin: 0;
+	display:block;
+	float: left;
+}
+
 #header {
 	background: #003300; 
 	background: linear-gradient(#004D00, #66FF66); 
