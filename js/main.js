@@ -34,48 +34,59 @@
         });
     }
 	
-	//AJAX LIVE SEARCH 
+	
 	$(document).ready(function() {
 	
+		//AJAX LIVE SEARCH 
+		
 		$("div.frmSearch").click(function(){
 			$("#search").focus();
 		});
 		
-		$( "#search" ).autocomplete({
+		$("#search").autocomplete({
 			source: "search.php",
 			minLength: 2,
 		});
+	
+		//HISTORY
 		
-		$('.historyAPI').on('click', function(e){
-            e.preventDefault();
-            var href = $(this).attr('href');
-             
-            // Getting Content
-            getContent(href, true);
-             
-            jQuery('.historyAPI').removeClass('active');
-            $(this).addClass('active');
-        });
+		var nav, content fetchAndInsert;
+		
+		nav = $('nav#main');
+		content = $('section#content');
+		
+		//Fetches and inserts content into conteiner
+		fetchAndInsert = function(href) {
+			$.ajax({
+				url:'http://localhost/page/election_info/' + href.split('/').pop(),
+				method: 'GET',
+				cache: false,
+				success: function(data) {
+					content.html(data);
+				}
+			});
+		};
+		
+		//User goes back/forward
+		$(window).on('popstate', function() {
+			fetchAndInsert(location.pathname);
+		});
+		
+		nav.find('a').on('click', function(e) {
+			var href = $(this).attr('href');
+			
+			//Manipulate history
+			history.pushState(null, null, href);
+			
+			//Fetch and insert
+			fetchAndInsert(href);
+			
+			e.preventDefault();
+			
+		});
 	
-	// Adding popstate event listener to handle browser back button  
-    window.addEventListener("popstate", function(e) {
-         
-        // Get State value using e.state
-        getContent(location.pathname, false);
-    });
+	});
 	
-	function getContent(url, addEntry) {
-        $.get(url).done(function( data ) {
-             
-            // Updating Content on Page
-            $('#contentHolder').html(data);
-             
-            if(addEntry == true) {
-                // Add History Entry using pushState
-                history.pushState(null, null, url); 
-            }
-             
-        });
 	
 	
 	
