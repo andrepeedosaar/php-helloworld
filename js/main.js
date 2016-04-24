@@ -45,45 +45,10 @@
 		
 		$("#search").autocomplete({
 			source: "search.php",
-			minLength: 2,
+			minLength: 2
 		});
 	
-		//HISTORY
 		
-		var nav, content fetchAndInsert;
-		
-		nav = $('nav#main');
-		content = $('section#content');
-		
-		//Fetches and inserts content into conteiner
-		fetchAndInsert = function(href) {
-			$.ajax({
-				url:'http://localhost/page/election_info/' + href.split('/').pop(),
-				method: 'GET',
-				cache: false,
-				success: function(data) {
-					content.html(data);
-				}
-			});
-		};
-		
-		//User goes back/forward
-		$(window).on('popstate', function() {
-			fetchAndInsert(location.pathname);
-		});
-		
-		nav.find('a').on('click', function(e) {
-			var href = $(this).attr('href');
-			
-			//Manipulate history
-			history.pushState(null, null, href);
-			
-			//Fetch and insert
-			fetchAndInsert(href);
-			
-			e.preventDefault();
-			
-		});
 	
 	});
 	
