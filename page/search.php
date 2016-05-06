@@ -16,11 +16,12 @@
 	/*$sql = "SELECT * 
 			FROM person 
 			WHERE firstname 
-			LIKE '".$key."%'";
+			ILIKE '".$key."%'";
 	*/
 	
 	//Õige SQL lause andmebaasiste andmete kätte saamiseks
 	//LAUSE TÖÖTAB HEROKUS ÕIGESTI
+	
 	$sql = "SELECT id, firstname, lastname
 			FROM candidate
 			WHERE firstname 
