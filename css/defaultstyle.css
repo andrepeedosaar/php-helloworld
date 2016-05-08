@@ -64,7 +64,7 @@ input[type=submit]{
 }
 
 .ui-autocomplete .ui-menu-item.ui-state-focus {
-   font-weight: bold;
+	font-weight: bold;
 }
 
 #header {
@@ -128,4 +128,10 @@ input[type=submit]{
 .candidateInfo {
 	float: right;
 	margin: 10px;
+}
+
+#map {
+	width:500px;
+	height:380px;
+	margin: 5px;
 }
