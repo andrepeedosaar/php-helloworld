@@ -92,6 +92,10 @@ input[type=submit]{
 	width: 50%; 
 }
 
+#logininfo a {
+	margin-top: 10px;
+}
+
 #loginfields {
 	float: right; 
 	width: 50%; 
@@ -139,4 +143,19 @@ input[type=submit]{
 	width:500px;
 	height:380px;
 	margin: 5px;
+}
+
+@media (max-width: 400) {
+	#logininfo a {
+		margin-left: 10px;
+	}
+	
+	h1 {
+		font-size: 10px;
+	}
+	
+	#footer{
+		text-align: center; 
+		font-size: 10px;
+	}
 }
