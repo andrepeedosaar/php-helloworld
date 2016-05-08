@@ -92,13 +92,10 @@ input[type=submit]{
 	width: 50%; 
 }
 
-#logininfo ul{
-	margin-left: 10px;
-}
-
 #logininfo li a {
 	display: inline;
 	padding-top: 10px;
+	padding-left: 10px;
 }
 
 #loginfields {
@@ -152,7 +149,7 @@ input[type=submit]{
 
 @media screen and (max-width: 600px) and (min-width: 400px) {
 	
-	#logininfo li a {
+	#logininfo nav ul li a {
 		display: block;
 		padding-top: 16px;
 	}

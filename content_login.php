@@ -32,8 +32,10 @@
 	<div id="logininfo"><p>
 			Sisse loginutele:
 			<nav>
-				<a href="?page=create_voting">Lisa valimine</a>
-				<a href="?page=create_candidate">Lisa kandidaat</a>
+				<ul>
+					<li><a href="?page=create_voting">Lisa valimine</a></li>
+					<li><a href="?page=create_candidate">Lisa kandidaat</a></li>
+				</ul>
 			</nav>
 		</p></div>
 	<div id="loginfields">
