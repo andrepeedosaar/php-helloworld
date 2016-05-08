@@ -9,7 +9,6 @@ h1 {
 	margin: 0;
 	padding: 30px;
 	text-align: center
-	max-width: 100%;
 }
 
 p {
@@ -93,7 +92,7 @@ input[type=submit]{
 	width: 50%; 
 }
 
-#logininfo ul {
+#logininfo ul li a {
 	display: inline;
 	padding-top: 10px;
 	padding-left: 10px;
