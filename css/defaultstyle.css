@@ -18,6 +18,7 @@ p {
 .menu a {
     color: black;
 	text-decoration: none; 
+	margin-left: 10px;
 }
 
 table {
@@ -94,6 +95,10 @@ input[type=submit]{
 #loginfields {
 	float: right; 
 	width: 50%; 
+}
+
+#loginfields input {
+	margin-top: 10px;
 }
 
 #togglebuttons { 
